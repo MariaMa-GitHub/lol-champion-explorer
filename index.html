@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>League of Legends Champion Explorer - Hover Version</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="app">
+      <!-- Header -->
+      <header>
+        <h1>League of Legends Champion Explorer</h1>
+      </header>
+
+      <!-- Main Visualization Container -->
+      <div id="visualization-container">
+        <!-- Map View -->
+        <div id="map-view" class="view active">
+          <svg id="runeterra-map"></svg>
+
+          <!-- Region Panel (appears on hover) -->
+          <div id="region-panel" class="region-panel">
+            <div id="region-header">
+              <h2 id="region-title"></h2>
+              <div id="region-stats"></div>
+            </div>
+
+            <!-- Main content area with gallery and details side by side -->
+            <div id="region-content" class="region-content">
+              <div id="champion-gallery"></div>
+
+              <!-- Region Overview (shows when no champion selected) -->
+              <div id="region-overview" class="region-overview">
+                <!-- Charts will be dynamically generated here -->
+              </div>
+
+              <!-- Champion Details Panel (inside region panel) -->
+              <div id="champion-details" class="champion-details-panel">
+                <div id="champion-header">
+                  <h3 id="champion-name"></h3>
+                  <p id="champion-title"></p>
+                  <div id="champion-basic-info">
+                    <span id="champion-difficulty"></span>
+                    <span id="champion-herotype"></span>
+                    <span id="champion-alttype"></span>
+                    <span id="champion-rangetype"></span>
+                  </div>
+                </div>
+                <div id="radar-chart-container">
+                  <svg id="radar-chart"></svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Loading Indicator -->
+      <div id="loading" class="loading">
+        <div class="spinner"></div>
+        <p>Loading Champion Data...</p>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="data.js"></script>
+    <script src="radar-chart.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
