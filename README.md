@@ -35,6 +35,8 @@ Champion data from `lol_champion_data_with_regions.csv` including:
 - Difficulty levels, hero types, lane positions, and resource types
 - Release dates and additional metadata
 
+The data comes from the ["Season 15 League of Legends Champion Data (2025)"](https://www.kaggle.com/datasets/laurenainsleyhaines/league-of-legends-champion-data/data) Kaggle dataset and the official League of Legends website. 
+
 **Data Source**: League of Legends champion data processed from official sources.
 
 ## File Structure
